@@ -1,14 +1,18 @@
 # Living Room Sample
 
-This is a sample that showcases several features together (HDR, instant radiosity, Parallax Corrected Cubemap) in the same application.
+This is a sample that showcases several features together
+(HDR, instant radiosity, Parallax Corrected Cubemap) in the same application.
 
 The scene has been obtained from:
 
-[McGuire2017] Morgan McGuire, Computer Graphics Archive, July 2017 (https://casual-effects.com/data)
+[McGuire2017] Morgan McGuire, Computer Graphics Archive, July 2017
+(https://casual-effects.com/data)
 
 The purpose of this sample is to:
+
 1. Show how to glue everything together
-1. Have something more eye candy to show than the traditionally uninteresting samples that come with Ogre
+1. Have something more eye candy to show than the traditionally uninteresting
+samples that come with Ogre
 1. Test any regression
 
 # How to compile
@@ -41,3 +45,9 @@ The purpose of this sample is to:
 
 ![image](Docs/Screenshot_2018-02-11_15-43-46.png)
 
+# Editing the scene
+
+The original files are in the External folder. Open External/living_room.blend
+in Blender to edit it. Blender 2.78c and
+[DERGO](https://bitbucket.org/dark_sylinc/dergo-blender) were used to create and
+export the scene.
