@@ -46,7 +46,13 @@ namespace Demo
     {
         HdrUtils::init( (Ogre::uint8)mGraphicsSystem->getRenderWindow()->getFSAA() );
 
+        Ogre::HlmsManager *hlmsManager = mGraphicsSystem->getRoot()->getHlmsManager();
+        //hlmsManager->setShadowMappingUseBackFaces( false );
+        Ogre::HlmsPbs *hlmsPbs = static_cast<Ogre::HlmsPbs*>( hlmsManager->getHlms(Ogre::HLMS_PBS) );
+        hlmsPbs->setShadowSettings( Ogre::HlmsPbs::PCF_4x4 );
+
         mCameraController = new CameraController( mGraphicsSystem, false );
+        mCameraController->mCameraBaseSpeed = 2.0f;
 
         Ogre::SceneManager *sceneManager = mGraphicsSystem->getSceneManager();
         sceneManager->setForwardClustered( true, 16, 8, 24, 96, 2, 50 );
@@ -78,6 +84,9 @@ namespace Demo
 
         //Hide the proxy geometry created by PCC.
         sceneManager->setVisibilityMask( ~mParallaxCorrectedCubemap->getProxyReservedVisibilityMask() );
+
+        Ogre::Camera *camera = mGraphicsSystem->getCamera();
+        camera->setPosition( Ogre::Vector3( 1.5, 1.5, 7.0f ) );
 
         const float exposure = 0.83f;
         const float minAutoExposure = -1.0f;

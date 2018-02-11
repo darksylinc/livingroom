@@ -14,4 +14,4 @@ bin/Data/resources2.cfg
 include/OgreCommon/
 src/OgreCommon/
 
-Dependencies/Ogre/
+Dependencies/Ogre

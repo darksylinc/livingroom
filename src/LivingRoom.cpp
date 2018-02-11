@@ -176,7 +176,7 @@ namespace Demo
                                          LogicSystem **outLogicSystem )
     {
         LivingRoomGameState *gfxGameState = new LivingRoomGameState(
-        "Empty Project Example" );
+        "Living Room Project" );
 
         GraphicsSystem *graphicsSystem = new LivingRoomGraphicsSystem( gfxGameState );
 
@@ -197,6 +197,6 @@ namespace Demo
 
     const char* MainEntryPoints::getWindowTitle(void)
     {
-        return "Empty Project Sample";
+        return "Living Room Project";
     }
 }
